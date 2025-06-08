@@ -1,0 +1,19 @@
+import threading
+from socket import*
+from customtkinter import *
+
+class MainWindow(CTk):
+    def __init__(self):
+        super().__init__()
+        
+        self.title("Network Application")
+        self.geometry("800x600")
+        
+        # Configure grid
+        self.grid_columnconfigure(0, weight=1)
+        self.grid_rowconfigure(0, weight=1)
+        
+        # Create main frame
+        self.main_frame = CTkFrame(self)
+        self.main_frame.grid(row=0, column=0, padx=10, pady=10, sticky="nsew')
+        
